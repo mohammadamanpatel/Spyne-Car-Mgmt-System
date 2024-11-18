@@ -20,6 +20,9 @@ app.listen(PORT, async () => {
   await DBConnection();
   console.log("app is listening on ", +PORT);
 });
+app.get("/api/docs", (req, res) => {
+  res.redirect("https://www.postman.com/joint-operations-cosmologist-64352344/spyne-ai-assignment/collection/mcqazv3/entity?action=share&creator=30730048");
+});
 app.use("/api/user", userRoutes);
 app.use("/api/car", carRoutes);
 const __dirname = path.resolve();
