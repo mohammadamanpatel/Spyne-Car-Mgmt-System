@@ -83,10 +83,15 @@ Swagger documentation is available at:
 ├── package.json               # Node.js dependencies
 ├── package-lock.json          # Lockfile for dependencies
 └── README.md                  # This file
-
+```
 ---
 
 ## Setup Instructions
+
+### Clone Repo:
+```
+git clone https://github.com/mohammadamanpatel/Spyne-Car-Mgmt-System
+```
 
 ### Backend:
 1. Navigate to the `server` directory:
