@@ -34,68 +34,55 @@ The **Car Management Application** is a full-stack application that allows users
 
 ---
 
-## Live Deployment
-
-The application is deployed and accessible at:  
-**Frontend**: [Car Management Frontend](https://spyne-car-mgmt-system-4mxr.vercel.app)  
-**Backend**: [Car Management Backend](https://spyne-car-mgmt-system.vercel.app)
-
 ---
 
 ## API Documentation
 
 Swagger documentation is available at:  
-[API Docs](https://spyne-car-mgmt-system.vercel.app/api/docs)
+[API Docs](https://www.postman.com/joint-operations-cosmologist-64352344/spyne-ai-assignment/collection/mcqazv3/car-mgmt-api-docs?action=share&creator=30730048)
 
 ---
 
 ## Folder Structure
 
-### Root Directory
-```
 .
 ├── .vscode/                   # Editor configuration
 ├── client/                    # Frontend application
+│   ├── src/
+│   │   ├── components/        # Reusable UI components
+│   │   ├── pages/             # Application pages
+│   │   ├── redux/             # Redux Toolkit slices
+│   │   ├── App.jsx            # Main application component
+│   │   ├── main.jsx           # Vite's main entry point
+│   │   └── index.css          # Global styles
+│   ├── public/                # Static assets
+│   ├── vite.config.js         # Vite configuration
+│   └── package.json           # Frontend dependencies
 ├── server/                    # Backend application
-├── uploads/                   # Uploaded images (local storage)
+│   ├── config/                # Database and app configurations
+│   │   └── DbConnect.js       # MongoDB connection setup
+│   ├── controllers/           # Logic for handling API requests
+│   │   ├── car.controller.js  # Car-related API logic
+│   │   └── user.controller.js # User-related API logic
+│   ├── middlewares/           # Authentication and validation logic
+|   |   └── Auth.js            # Auth file
+│   ├── models/                # Database schemas
+│   │   ├── user.model.js      # User schema
+│   │   └── car.model.js       # Car schema
+│   ├── routes/                # API route handlers
+│   │   ├── car.routes.js      # Car routes
+│   │   └── user.routes.js     # User routes
+│   ├── utils/                 # Helper utilities
+│   │   ├── imageUpload.js     # Helper for image upload
+│   │   └── multer.js          # Multer configuration
+│   ├── uploads/               # Temporary image uploads
+│   └── server.js              # Entry point for the backend
+├── uploads/                   # Temporary image uploads
 ├── .env                       # Environment variables
 ├── .gitignore                 # Git ignore file
 ├── package.json               # Node.js dependencies
 ├── package-lock.json          # Lockfile for dependencies
 └── README.md                  # This file
-```
-
-### Backend Directory (`server/`)
-```
-server/
-├── config/                    # Database and app configurations
-│   └── DbConnect.js           # MongoDB connection setup
-├── controllers/               # Logic for handling API requests
-│   ├── car.controller.js      # Car-related API logic
-│   └── user.controller.js     # User-related API logic
-├── middlewares/               # Authentication and validation logic
-├── models/                    # Database schemas
-├── routes/                    # API route handlers
-│   ├── car.routes.js          # Car routes
-│   └── user.routes.js         # User routes
-├── utils/                     # Helper utilities (e.g., multer)
-├── server.js                  # Entry point for the backend
-```
-
-### Frontend Directory (`client/`)
-```
-client/
-├── src/
-│   ├── components/            # Reusable UI components
-│   ├── pages/                 # Application pages
-│   ├── redux/                 # Redux Toolkit slices
-│   ├── App.jsx                # Main application component
-│   ├── main.jsx               # Vite's main entry point
-│   └── index.css              # Global styles
-├── public/                    # Static assets
-├── vite.config.js             # Vite configuration
-└── package.json               # Frontend dependencies
-```
 
 ---
 
@@ -112,7 +99,7 @@ client/
    ```
 3. Create a `.env` file with the following keys:
    ```
-   PORT=9000
+   PORT=<your_port_number>
    MONGO_URI=<your_mongo_connection_string>
    CLOUD_NAME=<your_cloudinary_cloud_name>
    API_KEY=<your_cloudinary_api_key>
@@ -140,12 +127,4 @@ client/
 
 ---
 
-## Contribution
-
-Feel free to fork the repository, raise issues, and create pull requests. Contributions are welcome! 😊
-
 --- 
-
-## License
-
-This project is licensed under the MIT License.
