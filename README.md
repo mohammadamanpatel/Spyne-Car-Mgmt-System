@@ -43,6 +43,9 @@ Postman documentation is available at:
 
 ---
 
+## Demo Video
+https://drive.google.com/file/d/1hxygd_VC7lLS35-odjMsvGi8okThnMuv/view?usp=sharing
+
 ## Folder Structure
 ```
 .
