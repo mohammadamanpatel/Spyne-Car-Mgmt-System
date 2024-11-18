@@ -38,7 +38,7 @@ The **Car Management Application** is a full-stack application that allows users
 
 ## API Documentation
 
-Swagger documentation is available at:  
+Postman documentation is available at:  
 [API Docs](https://www.postman.com/joint-operations-cosmologist-64352344/spyne-ai-assignment/collection/mcqazv3/car-mgmt-api-docs?action=share&creator=30730048)
 
 ---
