@@ -44,7 +44,7 @@ Swagger documentation is available at:
 ---
 
 ## Folder Structure
-
+```
 .
 ├── .vscode/                   # Editor configuration
 ├── client/                    # Frontend application
