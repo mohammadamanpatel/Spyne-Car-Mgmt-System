@@ -15,7 +15,7 @@ const Login = () => {
     const data = await login(credentials);
     if (data.token) {
       dispatch(setUser(data));
-      navigate("/dashboard");
+      navigate("/");
     } else {
       alert(data.message);
     }
