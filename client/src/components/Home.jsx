@@ -153,20 +153,21 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {list.length > 0 ? (
+          {list ? (
             list.map(
               (car) =>
-                car ? ( // Check if car exists
+                car && ( // Check if car exists
                   <div
                     key={car._id}
                     className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
                   >
-                    {/* Display the car's image */}
-                    <img
-                      src={car.images[0] || "placeholder-image-url.jpg"} // Show the first image or a placeholder if no images
-                      alt={car.title}
-                      className="w-full h-48 object-cover"
-                    />
+                    {car && (
+                      <img
+                        src={car.images?.[0] || "placeholder-image-url.jpg"}
+                        alt={car.title}
+                        className="w-full h-48 object-cover"
+                      />
+                    )}
                     <div className="p-6">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">
                         {car.title}
@@ -180,7 +181,7 @@ const Home = () => {
                       </Link>
                     </div>
                   </div>
-                ) : null // If car is falsy, render nothing
+                )
             )
           ) : (
             <div className="col-span-full text-center py-10 text-gray-500">
